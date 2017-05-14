@@ -4,7 +4,6 @@
 
 https://www.kfrlib.com
 
-
 ## Benchmark results
 ### FFT
 
