@@ -1,4 +1,4 @@
-#Contenu de cet exemple
+# Contenu de cet exemple
 Cet exemple permet de réaliser une simple lecture de fichier audio
 
 Attention les librairies incluses dans cet exemples sont les librairies utilisées sur un ordinateur MAC.
