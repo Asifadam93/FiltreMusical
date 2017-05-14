@@ -20,25 +20,6 @@ KFR is a header-only and has no external dependencies.
 * Most of the standard library functions are re-implemented to support vector of any length and data type
 * Runtime cpu detection
 
-Included DSP/audio algorithms:
-
-* FFT
-* Convolution
-* FIR filtering
-* FIR filter design using the window method
-* Resampling with configurable quality (See resampling.cpp from Examples directory)
-* Goertzel algorithm
-* Fractional delay
-* Biquad filtering
-* Biquad design functions
-* Oscillators: Sine, Square, Sawtooth, Triangle
-* Window functions: Triangular, Bartlett, Cosine, Hann, Bartlett-Hann, Hamming, Bohman, Blackman, Blackman-Harris, Kaiser, Flattop, Gaussian, Lanczos, Rectangular
-* Audio file reading/writing
-* Pseudorandom number generator
-* Sorting
-* Ring (Circular) buffer
-* Waveshaper
-* Fast incremental sine/cosine generation
 
 ## Benchmark results
 ### FFT
