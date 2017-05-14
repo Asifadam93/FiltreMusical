@@ -1,0 +1,17 @@
+Metadata-Version: 1.1
+Name: dspplot
+Version: 0.0.1
+Summary: Small python plotting library for DSP purposes
+Home-page: https://www.kfrlib.com/
+Author: KFRLIB.COM
+Author-email: info@kfrlib.com
+License: MIT
+Description: Small python plotting library for DSP purposes
+Platform: UNKNOWN
+Classifier: Development Status :: 4 - Beta
+Classifier: Programming Language :: Python :: 2
+Classifier: Programming Language :: Python :: 2.7
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.4
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Topic :: Scientific/Engineering :: Visualization
