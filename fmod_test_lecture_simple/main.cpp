@@ -56,7 +56,7 @@ int main()
 
     //récupération de l'emplacement du fichier à lire
     do {
-        cout << "Veuillez choisir l'emplacement du fichier à lire" << endl << "> ";
+        cout << "Veuillez choisir l'emplacement du fichier à lire (attentions les espaces peuvent causent problèmes pour le moment)" << endl << "> ";
         cin >> soundFile;
     } while(!checkFileLocation(soundFile));
 
