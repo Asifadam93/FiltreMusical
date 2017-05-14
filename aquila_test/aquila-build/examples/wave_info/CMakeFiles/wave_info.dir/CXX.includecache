@@ -1,0 +1,46 @@
+#IncludeRegexLine: ^[ 	]*#[ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/asifadam93/Desktop/aquilaTest/aquila-src/aquila/global.h
+complex
+-
+vector
+-
+
+/home/asifadam93/Desktop/aquilaTest/aquila-src/aquila/source/SignalSource.h
+../global.h
+/home/asifadam93/Desktop/aquilaTest/aquila-src/aquila/global.h
+cstddef
+-
+iterator
+-
+utility
+-
+vector
+-
+
+/home/asifadam93/Desktop/aquilaTest/aquila-src/aquila/source/WaveFile.h
+../global.h
+/home/asifadam93/Desktop/aquilaTest/aquila-src/aquila/global.h
+SignalSource.h
+/home/asifadam93/Desktop/aquilaTest/aquila-src/aquila/source/SignalSource.h
+cstddef
+-
+cstdint
+-
+string
+-
+vector
+-
+
+/home/asifadam93/Desktop/aquilaTest/aquila-src/examples/wave_info/wave_info.cpp
+aquila/source/WaveFile.h
+/home/asifadam93/Desktop/aquilaTest/aquila-src/examples/wave_info/aquila/source/WaveFile.h
+iostream
+-
+

@@ -1,0 +1,38 @@
+#IncludeRegexLine: ^[ 	]*#[ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/asifadam93/Desktop/aquilaTest/aquila-src/aquila/functions.h
+global.h
+/home/asifadam93/Desktop/aquilaTest/aquila-src/aquila/global.h
+algorithm
+-
+cmath
+-
+cstdlib
+-
+functional
+-
+
+/home/asifadam93/Desktop/aquilaTest/aquila-src/aquila/global.h
+complex
+-
+vector
+-
+
+/home/asifadam93/Desktop/aquilaTest/aquila-src/examples/utility_functions/utility_functions.cpp
+aquila/functions.h
+/home/asifadam93/Desktop/aquilaTest/aquila-src/examples/utility_functions/aquila/functions.h
+aquila/global.h
+/home/asifadam93/Desktop/aquilaTest/aquila-src/examples/utility_functions/aquila/global.h
+cstdlib
+-
+ctime
+-
+iostream
+-
+
