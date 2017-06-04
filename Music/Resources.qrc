@@ -1,0 +1,13 @@
+<RCC>
+    <qresource prefix="/">
+        <file>Icons/Actions-document-new-icon.png</file>
+        <file>Icons/Actions-document-save-as-icon.png</file>
+        <file>Icons/Actions-document-save-icon.png</file>
+        <file>Icons/Actions-edit-copy-icon.png</file>
+        <file>Icons/Actions-edit-cut-icon.png</file>
+        <file>Icons/Actions-edit-paste-icon.png</file>
+        <file>Icons/Actions-edit-redo-icon.png</file>
+        <file>Icons/Actions-edit-undo-icon.png</file>
+        <file>Icons/Actions-document-open-folder-icon.png</file>
+    </qresource>
+</RCC>
