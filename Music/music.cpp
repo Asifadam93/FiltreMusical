@@ -1,4 +1,5 @@
 #include "music.h"
+#include "playaudio.h"
 #include "ui_music.h"
 #include <QMessageBox>
 #include <QFileDialog>
@@ -122,6 +123,7 @@ bool Music::on_action_Save_triggered()
 
 void Music::on_action_Open_triggered()
 {
+    PlayAudio mPlay("/home/asifadam93/Bureau/fMod_Home/myFMod/UI/Music/Beethoven  Lettre à Elise.mp3");
 
     if(maybeSave()){
         QString fileName = QFileDialog::getOpenFileName(
@@ -179,6 +181,7 @@ void Music::loadFile(const QString &fileName)
     if(!fileName.isEmpty()){
         QFile file(fileName);
         if(file.open(QFile::ReadOnly)){
+
             ui->plainTextEdit->setPlainText(fileName);
             setCurrentFile(fileName);
         }else{
