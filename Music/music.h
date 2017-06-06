@@ -2,6 +2,8 @@
 #define Music_H
 
 #include <QMainWindow>
+#include <iostream>
+#include <iomanip>
 
 namespace Ui {
 class Music;

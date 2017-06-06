@@ -123,7 +123,7 @@ bool Music::on_action_Save_triggered()
 
 void Music::on_action_Open_triggered()
 {
-    PlayAudio mPlay("/home/asifadam93/Bureau/fMod_Home/myFMod/UI/Music/Beethoven  Lettre à Elise.mp3");
+    //PlayAudio mPlay("/home/asifadam93/Bureau/fMod_Home/myFMod/UI/Music/Beethoven  Lettre à Elise.mp3");
 
     if(maybeSave()){
         QString fileName = QFileDialog::getOpenFileName(
@@ -184,6 +184,10 @@ void Music::loadFile(const QString &fileName)
 
             ui->plainTextEdit->setPlainText(fileName);
             setCurrentFile(fileName);
+
+            PlayAudio playAudio;
+            playAudio.playSong(fileName.toStdString().c_str());
+
         }else{
             QMessageBox::warning(
                         this,
