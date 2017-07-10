@@ -199,3 +199,44 @@ void Music::loadFile(const QString &fileName)
     }
 }
 
+
+void Music::on_pushButtonPlay_clicked()
+{
+    QMessageBox::warning(
+                this,
+                "Music Play",
+                tr("Appuie du bouton play' %1.")
+                .arg("fileName")
+                .arg("file.errorString()"));
+
+}
+
+void Music::on_pushButtonStop_clicked()
+{
+    QMessageBox::warning(
+                this,
+                "Music Stop",
+                tr("Appuie du bouton play' %1.")
+                .arg("fileName")
+                .arg("file.errorString()"));
+}
+
+void Music::on_radioButtonFiltre_clicked(bool checked)
+{
+    if (checked == true) {
+        QMessageBox::warning(
+                    this,
+                    "Filtre Check",
+                    tr("La case est coché' %1.")
+                    .arg("fileName")
+                    .arg("file.errorString()"));
+    }
+    else {
+        QMessageBox::warning(
+                    this,
+                    "Filtre déchecké",
+                    tr("La case est décoché' %1.")
+                    .arg("fileName")
+                    .arg("file.errorString()"));
+    }
+}

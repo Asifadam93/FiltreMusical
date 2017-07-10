@@ -29,6 +29,12 @@ private slots:
     void openRecentFile();
 
 
+    void on_pushButtonPlay_clicked();
+
+    void on_pushButtonStop_clicked();
+
+    void on_radioButtonFiltre_clicked(bool checked);
+
 private:
     Ui::Music *ui;
     bool saveFile(const QString &fileName);
