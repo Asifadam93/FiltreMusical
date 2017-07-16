@@ -36,6 +36,8 @@ class PlayAudio{
         PlayAudio();
         void playSong(const char* songPath);
         void stopSong();
+        void applyFilter();
+        void stopFilter();
 };
 
 #endif // PLAYAUDIO_H

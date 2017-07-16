@@ -98,7 +98,7 @@ public:
         Music->setCentralWidget(centralWidget);
         menuBar = new QMenuBar(Music);
         menuBar->setObjectName(QStringLiteral("menuBar"));
-        menuBar->setGeometry(QRect(0, 0, 519, 25));
+        menuBar->setGeometry(QRect(0, 0, 519, 22));
         menu_File = new QMenu(menuBar);
         menu_File->setObjectName(QStringLiteral("menu_File"));
         menuOpen_Recent_Files = new QMenu(menu_File);
@@ -145,7 +145,7 @@ public:
 #endif // QT_NO_TOOLTIP
         action_Exit->setText(QApplication::translate("Music", "&Quitter", Q_NULLPTR));
         plainTextEdit->setDocumentTitle(QString());
-        radioButtonFiltre->setText(QApplication::translate("Music", "Filtre", Q_NULLPTR));
+        radioButtonFiltre->setText(QApplication::translate("Music", "Filtre passe-bas", Q_NULLPTR));
         pushButtonPlay->setText(QApplication::translate("Music", "Play", Q_NULLPTR));
         pushButtonStop->setText(QApplication::translate("Music", "Stop", Q_NULLPTR));
         menu_File->setTitle(QApplication::translate("Music", "&Fichier", Q_NULLPTR));

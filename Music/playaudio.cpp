@@ -21,9 +21,6 @@ PlayAudio::PlayAudio(){
             exit(-1);
         }
 
-
-
-
         /*sound->getLength(&soundLength, FMOD_TIMEUNIT_MS);
 
 
@@ -47,4 +44,14 @@ void PlayAudio::stopSong(){
     result = channel->stop();
 }
 
+
+void PlayAudio::applyFilter(){
+    system->createDSPByType(FMOD_DSP_TYPE_HIGHPASS, &dspLowPass);
+    masterGroup->addDSP(0, dspLowPass);
+    dspLowPass->setBypass(false);
+}
+
+void PlayAudio::stopFilter(){
+    dspLowPass->setBypass(true);
+}
 

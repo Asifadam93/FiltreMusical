@@ -197,7 +197,6 @@ void Music::loadFile(const QString &fileName)
 
 void Music::on_pushButtonPlay_clicked()
 {
-
     mPlayAudio.playSong(this->fileName.toStdString().c_str());
     /*QMessageBox::warning(
                 this,
@@ -233,19 +232,23 @@ void Music::on_pushButtonStop_clicked()
 void Music::on_radioButtonFiltre_clicked(bool checked)
 {
     if (checked == true) {
-        QMessageBox::warning(
+        mPlayAudio.applyFilter();
+        /*QMessageBox::warning(
                     this,
                     "Filtre Check",
                     tr("La case est coché' %1.")
                     .arg("fileName")
-                    .arg("file.errorString()"));
+                    .arg("file.errorString()"));*/
+        QMessageBox::information(this, tr("Info"), "Filter appliqué");
     }
     else {
-        QMessageBox::warning(
+        mPlayAudio.stopFilter();
+        /*QMessageBox::warning(
                     this,
                     "Filtre déchecké",
                     tr("La case est décoché' %1.")
                     .arg("fileName")
-                    .arg("file.errorString()"));
+                    .arg("file.errorString()"));*/
+        QMessageBox::information(this, tr("Info"), "Filter annulé");
     }
 }
