@@ -1,5 +1,4 @@
 #include "music.h"
-#include "playaudio.h"
 #include "ui_music.h"
 #include <QMessageBox>
 #include <QFileDialog>
@@ -97,7 +96,6 @@ void Music::writeSettings()
 
 void Music::setCurrentFile(const QString &fileName)
 {
-
     curFile = fileName;
 
     setWindowTitle(tr("Music - %1[*]").arg(QFileInfo(curFile).fileName()));
@@ -123,14 +121,13 @@ bool Music::on_action_Save_triggered()
 
 void Music::on_action_Open_triggered()
 {
-    //PlayAudio mPlay("/home/asifadam93/Bureau/fMod_Home/myFMod/UI/Music/Beethoven  Lettre à Elise.mp3");
 
     if(maybeSave()){
         QString fileName = QFileDialog::getOpenFileName(
                     this,
                     "Music - Ouvrir Fichier",
-                    "/home/luis/Documents",
-                    "Music Files (*.wav);;All Files (*.*)");
+                    QDir::homePath(),
+                    "Music Files (*.mp3 *.wav);;All Files (*.*)");
         loadFile(fileName);
     }
 
@@ -177,7 +174,6 @@ void Music::updateRecentFileActions()
 
 void Music::loadFile(const QString &fileName)
 {
-
     if(!fileName.isEmpty()){
         QFile file(fileName);
         if(file.open(QFile::ReadOnly)){
@@ -185,8 +181,7 @@ void Music::loadFile(const QString &fileName)
             ui->plainTextEdit->setPlainText(fileName);
             setCurrentFile(fileName);
 
-            PlayAudio playAudio;
-            playAudio.playSong(fileName.toStdString().c_str());
+            this->fileName = fileName;
 
         }else{
             QMessageBox::warning(
@@ -202,23 +197,37 @@ void Music::loadFile(const QString &fileName)
 
 void Music::on_pushButtonPlay_clicked()
 {
-    QMessageBox::warning(
+
+    mPlayAudio.playSong(this->fileName.toStdString().c_str());
+    /*QMessageBox::warning(
                 this,
                 "Music Play",
                 tr("Appuie du bouton play' %1.")
                 .arg("fileName")
                 .arg("file.errorString()"));
 
+    QMessageBox::information(
+                this,
+                "Music Play",
+                tr("Appuie du bouton play' %1.")
+                .arg("fileName")
+                .arg("file.errorString()"));*/
+
+    //QMessageBox::information(this, tr("Info"), "Lecture en cours");
+
 }
 
 void Music::on_pushButtonStop_clicked()
 {
-    QMessageBox::warning(
+    mPlayAudio.stopSong();
+    /*QMessageBox::warning(
                 this,
                 "Music Stop",
                 tr("Appuie du bouton play' %1.")
                 .arg("fileName")
-                .arg("file.errorString()"));
+                .arg("file.errorString()"));*/
+
+    //QMessageBox::information(this, tr("Info"), "Music");
 }
 
 void Music::on_radioButtonFiltre_clicked(bool checked)

@@ -35,6 +35,7 @@ class PlayAudio{
     public:
         PlayAudio();
         void playSong(const char* songPath);
+        void stopSong();
 };
 
 #endif // PLAYAUDIO_H

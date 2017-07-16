@@ -4,6 +4,7 @@
 #include <QMainWindow>
 #include <iostream>
 #include <iomanip>
+#include "playaudio.h"
 
 namespace Ui {
 class Music;
@@ -44,10 +45,10 @@ private:
     void setCurrentFile(const QString &fileName);
     void updateRecentFileActions();
     void loadFile(const QString &fileName);
-    QString curFile;
-
+    QString curFile, fileName;
     enum {MaxRecenFiles = 5};
     QAction *recentFilesActs[MaxRecenFiles];
+    PlayAudio mPlayAudio;
 };
 
 #endif // Music_H
