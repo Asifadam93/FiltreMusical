@@ -6,7 +6,6 @@
 
 using namespace std;
 
-
 /**
  * Fonction permettant de savoir si l'emplacement du fichier qu'on nous transmet est correspond à un fichier ou pas
  * @param name

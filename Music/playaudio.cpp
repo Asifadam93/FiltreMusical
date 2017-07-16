@@ -42,6 +42,7 @@ void PlayAudio::playSong(const char* songPath){
 
 void PlayAudio::stopSong(){
     result = channel->stop();
+    sound->release();
 }
 
 
