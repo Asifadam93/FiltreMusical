@@ -16,6 +16,7 @@ class PlayAudio{
         FMOD::Channel       *channel = 0;
         FMOD::ChannelGroup  *masterGroup;
         FMOD::DSP           *dspLowPass = 0;
+        FMOD::DSP           *dspHighPass = 0;
         FMOD_RESULT         result;
 
         unsigned int    soundLength;
@@ -36,8 +37,10 @@ class PlayAudio{
         PlayAudio();
         void playSong(const char* songPath);
         void stopSong();
-        void applyFilter();
-        void stopFilter();
+        void applyLowPassFilter();
+        void applyHighPassFilter();
+        void stopLowPassFilter();
+        void stopHighPassFilter();
 };
 
 #endif // PLAYAUDIO_H

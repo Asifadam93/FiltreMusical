@@ -198,57 +198,38 @@ void Music::loadFile(const QString &fileName)
 void Music::on_pushButtonPlay_clicked()
 {
     mPlayAudio.playSong(this->fileName.toStdString().c_str());
-    /*QMessageBox::warning(
-                this,
-                "Music Play",
-                tr("Appuie du bouton play' %1.")
-                .arg("fileName")
-                .arg("file.errorString()"));
-
-    QMessageBox::information(
-                this,
-                "Music Play",
-                tr("Appuie du bouton play' %1.")
-                .arg("fileName")
-                .arg("file.errorString()"));*/
-
-    //QMessageBox::information(this, tr("Info"), "Lecture en cours");
 
 }
 
 void Music::on_pushButtonStop_clicked()
 {
     mPlayAudio.stopSong();
-    /*QMessageBox::warning(
-                this,
-                "Music Stop",
-                tr("Appuie du bouton play' %1.")
-                .arg("fileName")
-                .arg("file.errorString()"));*/
 
-    //QMessageBox::information(this, tr("Info"), "Music");
 }
 
-void Music::on_radioButtonFiltre_clicked(bool checked)
+
+void Music::on_checkBox_toggled(bool checked)
 {
     if (checked == true) {
-        mPlayAudio.applyFilter();
-        /*QMessageBox::warning(
-                    this,
-                    "Filtre Check",
-                    tr("La case est coché' %1.")
-                    .arg("fileName")
-                    .arg("file.errorString()"));*/
+        mPlayAudio.applyLowPassFilter();
         QMessageBox::information(this, tr("Info"), "Filter appliqué");
+
     }
     else {
-        mPlayAudio.stopFilter();
-        /*QMessageBox::warning(
-                    this,
-                    "Filtre déchecké",
-                    tr("La case est décoché' %1.")
-                    .arg("fileName")
-                    .arg("file.errorString()"));*/
+        mPlayAudio.stopLowPassFilter();
+        QMessageBox::information(this, tr("Info"), "Filter annulé");
+    }
+}
+
+void Music::on_checkBox_2_toggled(bool checked)
+{
+    if (checked == true) {
+        mPlayAudio.applyHighPassFilter();
+        QMessageBox::information(this, tr("Info"), "Filter appliqué");
+
+    }
+    else {
+        mPlayAudio.stopHighPassFilter();
         QMessageBox::information(this, tr("Info"), "Filter annulé");
     }
 }

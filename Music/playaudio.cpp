@@ -46,13 +46,23 @@ void PlayAudio::stopSong(){
 }
 
 
-void PlayAudio::applyFilter(){
-    system->createDSPByType(FMOD_DSP_TYPE_HIGHPASS, &dspLowPass);
+void PlayAudio::applyLowPassFilter(){
+    system->createDSPByType(FMOD_DSP_TYPE_LOWPASS, &dspLowPass);
     masterGroup->addDSP(0, dspLowPass);
     dspLowPass->setBypass(false);
 }
 
-void PlayAudio::stopFilter(){
+void PlayAudio::applyHighPassFilter(){
+    system->createDSPByType(FMOD_DSP_TYPE_HIGHPASS, &dspHighPass);
+    masterGroup->addDSP(0, dspHighPass);
+    dspLowPass->setBypass(false);
+}
+
+void PlayAudio::stopHighPassFilter(){
+    dspHighPass->setBypass(true);
+}
+
+void PlayAudio::stopLowPassFilter(){
     dspLowPass->setBypass(true);
 }
 

@@ -29,12 +29,13 @@ private slots:
 
     void openRecentFile();
 
-
     void on_pushButtonPlay_clicked();
 
     void on_pushButtonStop_clicked();
 
-    void on_radioButtonFiltre_clicked(bool checked);
+    void on_checkBox_toggled(bool checked);
+
+    void on_checkBox_2_toggled(bool checked);
 
 private:
     Ui::Music *ui;
